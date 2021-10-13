@@ -3,6 +3,7 @@ pipeline {
     environment {
         ECR_REGISTRY = "274240838422.dkr.ecr.us-east-1.amazonaws.com"
         APP_REPO_NAME= "clarusway/to-do-app"
+        PATH="/usr/local/bin/:${env.PATH}"
     }
     stages {
         stage("Run app on Docker"){
